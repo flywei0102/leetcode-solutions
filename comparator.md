@@ -56,3 +56,9 @@ if(o1.compareTo(o2) < 0){           // o1在o2之前， o1比o2小
 
 // 要升序， 那么o1要比o2小；返回-1 (相当于false), 表示不想调整顺序
 // 要降序， 那么o1要比o2大；返回1 (相当于true), 表示想调整顺序
+
+
+
+--------------------------------—
+PriorityQueue<Integer> heap = new PriorityQueue<>();    默认为小顶堆
+PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());    大顶堆
