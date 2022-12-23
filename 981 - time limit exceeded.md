@@ -52,6 +52,8 @@ class TimeMap {
 
 
 // 思路：HashMap<key, treeMap<timestamp, value>>
+// 超时原因：treeMap。这题不需要对timestamp用treemap排序，因为每次set()的timestamp肯定是越来越大。改用Pair<>
+
 
 /**
  * Your TimeMap object will be instantiated and called as such:
