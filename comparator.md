@@ -59,6 +59,9 @@ if(o1.compareTo(o2) < 0){           // o1在o2之前， o1比o2小
 
 
 
---------------------------------—
+🌟 --------------------------------—
 PriorityQueue<Integer> heap = new PriorityQueue<>();    默认为小顶堆
 PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());    大顶堆
+
+example:
+- 1834  single-threaded CPU
