@@ -5,8 +5,11 @@
     - 基于哈希表的Map接口实现
     - 底层是array结构
     - 无序，key值不可重复
-    - 
 
+intitialization:
+
+    - Map< , > map = new HashMap<>();
+    - HashMap map = new HashMap();      // 290
 
 🌟TreeMap   
 
