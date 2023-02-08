@@ -1,10 +1,11 @@
-Arrays.sort(nums, (a, b) -> a - b);    等同于   Arrays.sort(nums);            // 将数组nums按升序排序
+🌟  将数组nums按**升序**排序
+Arrays.sort(nums, (a, b) -> a - b);    等同于   Arrays.sort(nums);            
 
 Java的内置静态方法Arrays.sort()中，有 static <T> void sort(T[] nums, Comparator<? super T> c)这个方法；
 此方法有两个输入参数，数组nums 和 比较器c;
 可以通过自己定义比较器c，实现对sort排序规则的改变；sort()默认是对nums进行升序（从小到大）排序。
 
-🌟 🌟  对整数型数组nums实现**从大到小（降序）**排序
+🌟 🌟  对整数型数组nums实现**降序**排序
 Arrays.sort(nums, new Comparator<>(){
         public int compare(int a, int b){
                 return b - a;
@@ -12,6 +13,7 @@ Arrays.sort(nums, new Comparator<>(){
 });
 
 或者用lambda表达，-> Arrays.sort(nums, (a, b) -> b - a);
+
 🌟 以上的降序写法中，假设b为Integer.MIN_VALUE, a为正数时，计算a-b时会溢出，返回有误。
         _降序_推荐以下写法：
         Arrays.sort(nums, (a, b) -> Integer.compare(b, a));
@@ -65,3 +67,4 @@ PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());   
 
 example:
 - 1834  single-threaded CPU
+- 179     largest number
