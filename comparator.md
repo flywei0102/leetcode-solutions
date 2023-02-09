@@ -1,5 +1,5 @@
-🌟   数组必须是object，Integer[], String[].…    
-       not int[]
+🌟   Arrays.sort() 可以使用int[], char[]....; 
+       但使用comparator的数组必须是object，Integer[], String[]... not int[]
 
 🌟  将数组nums按**升序**排序
 Arrays.sort(nums, (a, b) -> a - b);    等同于   Arrays.sort(nums);            
