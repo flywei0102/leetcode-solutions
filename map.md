@@ -45,3 +45,11 @@ intitialization:
     - 
 
 
+🌟 iterator() 
+
+    - get the values from a list or hashSet or hashMap
+    - set is disordered, thus we can use for loop to do the iteration, so as hashMap
+    - [iterator()](https://blog.csdn.net/moqiyong666/article/details/107469392?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-107469392-blog-88243262.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-107469392-blog-88243262.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=2)
+    - Iterator it = set.iterator() -> while(it.hasNext()){  = it.next()}
+
+
