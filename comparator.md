@@ -50,6 +50,10 @@ Arrays.sort(nums, new Comparator<int[]>(){
 });
 
 
+example:
+- 1710  Maximum Units on a Truck
+
+
 
 ------------—
 **默认为从小到大排序，用参数a减参数b。若需要从大到小排序，则用参数b减参数a。（同②，不一定是相减，从小到大排按正常思路，参数a大则返回正数；若要从大到小排，则按相反思路，参数a大则返回负数）
