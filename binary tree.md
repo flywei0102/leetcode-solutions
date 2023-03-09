@@ -7,6 +7,7 @@
     - 129 sum root to leaf numbers
     - 130 surrounded regions
     - 286 walls and gates
+    - 547 number of provices(or friend circles) (Union Find)
     
  🌟 TreeMap
     
