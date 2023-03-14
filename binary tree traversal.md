@@ -1,3 +1,31 @@
+**Level-order traversal**
+Breadth-First-Search(BFS)
+
+class Solution{
+        public List<List<Integer>> bfs(TreeNode root){
+                List<List<Integer>> ans = new ArrayList<>;
+                if(root == null) return ans;
+                Queue<TreeNode> queue = new LinkedList<>();  
+                queue.offer(root);
+                int level = 0;
+                while(!queue.isEmpty()){
+                        List<Integer> eachLevel = new ArrayList<>();
+           //             ans.add(new ArrayList<Integer>());
+                        int levelLength = queue.size();
+                        for(int i = 0; i < levelLength; i++){
+                                TreeNode curr = queue.poll();
+                                eachLevel.add(curr.val);
+            //                    ans.get(level).add(curr.val);
+                                if(curr.left != null) queue.offer(curr.left);
+                                if(curr.right != null) queue.offer(curr.right);
+                        }
+                        level ++;
+                }
+                return ans;
+        }
+}
+-------------------------------------------------------------------------
+
 **pre-order traversal**
 <root - left - right>
 **iterative solution**
