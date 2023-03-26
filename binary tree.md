@@ -25,6 +25,7 @@
     - 286 walls and gates
     - 547 number of provices(or friend circles) (Union Find)
     - 752 open the lock
+    - 812 largest triangle area (*)
     
  🌟 TreeMap
     
