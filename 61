@@ -1,0 +1,23 @@
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        if(k == 0 || head == null || head.next == null) return head;
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode fast = dummy, slow = dummy;
+
+        int n = 0;   // get the total length
+        while(fast.next != null){
+            fast = fast.next;
+            n++;
+        }
+        // get the i - n%i th ListNode
+        for(int j = n - k%n; j > 0; j --){
+            slow = slow.next;
+        }
+        // rotate
+        fast.next = dummy.next;
+        dummy.next = slow.next;
+        slow.next = null;       
+        return dummy.next;
+    }
+}
