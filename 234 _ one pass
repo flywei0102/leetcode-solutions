@@ -1,0 +1,38 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head, fast = head, pre, temp;
+        while(fast != null && fast.next != null){
+            slow = slow.next;   // move slow to the second half of the list and compare it with pre
+            fast = fast.next.next;
+        }
+        pre = slow;          // node before the middle node
+        slow = slow.next;    // the middle node
+        pre.next = null;     
+        while(slow != null){
+            temp = slow.next;
+            slow.next = pre;
+            pre = slow;
+            slow = temp;
+        }
+        fast = head;
+        slow = pre;
+        while(slow != null){
+            if(fast.val != slow.val) return false;
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return true;
+    }
+}
+
+// code works, but do not understand this one pass solution ....
