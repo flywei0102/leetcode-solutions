@@ -1,0 +1,38 @@
+class Solution {
+    private int[] nums;
+    private Random rand;
+
+    public Solution(int[] nums) {
+        this.nums = nums;
+        rand = new Random();
+    }
+    
+    public int[] reset() {
+        return nums;
+    }
+    
+    public int[] shuffle() {
+        int[] clone = nums.clone();    // make a copy of array
+        for(int end = nums.length - 1; end >= 0; end --){
+            int randNum = rand.nextInt(end + 1);    // randon number of index, nums[randNum], which will be swapped with the nums[end] number
+            swap(clone, randNum, end);
+        }
+        return clone;
+    }
+
+    private void swap(int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * Solution obj = new Solution(nums);
+ * int[] param_1 = obj.reset();
+ * int[] param_2 = obj.shuffle();
+ */
+
+// Fisher-Yates algorithm
+ // https://www.youtube.com/watch?v=VO0mf19dBWU
