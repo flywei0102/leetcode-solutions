@@ -1,0 +1,13 @@
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if(n <= 0) return false;
+        return ((n&(n - 1)) == 0);
+    }
+}
+
+
+
+// & operator (Bitwise AND): A bit in the result is 1 if and only if both of the corresponding bits in the operands are 1. 
+//   a = 01100010
+//   b = 10111010
+// a&b = 00100010
